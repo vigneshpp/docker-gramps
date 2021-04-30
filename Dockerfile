@@ -1,4 +1,4 @@
-FROM ubuntu:21.04
+FROM ubuntu:20.04
 
 LABEL maintainer="Vi P <vignesh@admin.com>"
 
@@ -30,7 +30,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ADD https://github.com/gramps-project/gramps/releases/download/v5.1.3/gramps_5.1.3-1_all.deb /tmp/gramps.deb
+ADD https://github.com/gramps-project/gramps/releases/download/v5.1.2/gramps_5.1.2-1_all.deb /tmp/gramps.deb
 RUN dpkg -i /tmp/gramps.deb \
  && rm /tmp/gramps.deb
 
